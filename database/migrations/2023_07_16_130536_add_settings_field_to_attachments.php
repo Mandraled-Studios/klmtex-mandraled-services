@@ -14,7 +14,6 @@ class AddSettingsFieldToAttachments extends Migration
     public function up()
     {
         Schema::connection('mysql2')->table('attachments', function (Blueprint $table) {
-            $table->foreignID('product_id')->constrained('products')->onUpdate('cascade')->onDelete('cascade');
             $table->string('setting1')->nullable();
             $table->string('setting2')->nullable();
             $table->string('setting3')->nullable();
