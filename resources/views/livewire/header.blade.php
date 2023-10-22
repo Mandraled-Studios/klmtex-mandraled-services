@@ -6,7 +6,9 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <img src="{{$company->logo??}}" class="h-14" alt="">
+                        @isset($company->logo)
+                        <img src="{{$company->logo}}" class="h-14" alt="">
+                        @endisset
                     </a>
                 </div>
             </div>
